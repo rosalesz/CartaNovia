@@ -25,16 +25,23 @@ export default function MusicPlayer({ autoPlay = false }: MusicPlayerProps) {
     }
   }, [autoPlay]);
 
-  const togglePlay = () => {
-    if (!audioRef.current) return;
+  const togglePlay = async () => {
+  if (!audioRef.current) return;
 
+  try {
     if (isPlaying) {
       audioRef.current.pause();
+      setIsPlaying(false);
     } else {
-      audioRef.current.play();
+      audioRef.current.currentTime = 0; // asegura inicio limpio
+      await audioRef.current.play();    // 👈 ESPERA a que realmente suene
+      setIsPlaying(true);
     }
-    setIsPlaying(!isPlaying);
-  };
+  } catch (err) {
+    console.error("El navegador bloqueó el audio:", err);
+  }
+};
+
 
   return (
     <>
