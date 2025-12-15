@@ -15,7 +15,7 @@ import { Heart } from 'lucide-react';
 const PHOTOS = {
   // 1. Foto principal (La del círculo arriba). 
   // Idealmente cuadrada o de rostro.
-  main: "https://photos.fife.usercontent.google.com/pw/AP1GczM6a-5If1qbEFaY0QVnT0wxb8qiAFkhzREoPpOu68lrreK42kHfnrI=w559-h989-s-no-gm?authuser=0",
+  main: "",
   
   // 2. Primera foto inclinada (Izquierda) - "Un momento juntos"
   // CAMBIO: Ahora uso una imagen HORIZONTAL para que no se vea "larga".
