@@ -3,21 +3,33 @@ import PhotoFrame from './PhotoFrame';
 import BackgroundEffects from './BackgroundEffects';
 import { Heart } from 'lucide-react';
 
-// 👇👇👇 CAMBIA TUS FOTOS AQUÍ 👇👇👇
+// =========================================================================
+// 📸 ZONA DE FOTOS: CAMBIA LOS ENLACES AQUÍ ABAJO
+// =========================================================================
+// Instrucciones:
+// 1. Sube tu foto a un sitio como https://es.imgbb.com/
+// 2. Copia el "Enlace directo" de la imagen (debe terminar en .jpg o .png)
+// 3. Pega el enlace dentro de las comillas abajo, borrando el que hay ahora.
+// =========================================================================
+
 const PHOTOS = {
-  // Foto principal (círculo arriba). Idealmente cuadrada.
-  main: "https://picsum.photos/id/64/400/400",
+  // 1. Foto principal (La del círculo arriba). 
+  // Idealmente cuadrada o de rostro.
+  main: "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?q=80&w=1000&auto=format&fit=crop",
   
-  // Primera foto inclinada (izquierda)
-  moment1: "https://picsum.photos/id/331/300/400",
+  // 2. Primera foto inclinada (Izquierda) - "Un momento juntos"
+  // CAMBIO: Ahora uso una imagen HORIZONTAL para que no se vea "larga".
+  moment1: "https://images.unsplash.com/photo-1511988617509-a57c8a288659?q=80&w=1000&auto=format&fit=crop",
   
-  // Segunda foto inclinada (derecha)
-  moment2: "https://picsum.photos/id/342/300/400",
+  // 3. Segunda foto inclinada (Derecha)
+  moment2: "https://images.unsplash.com/photo-1621112904887-419379ce6824?q=80&w=1000&auto=format&fit=crop",
   
-  // Foto final grande vertical
-  final: "https://picsum.photos/id/429/600/800"
+  // 4. Foto final grande (Al final de la carta)
+  // Idealmente vertical.
+  final: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1000&auto=format&fit=crop"
 };
-// 👆👆👆 -------------------------- 👆👆👆
+
+// 👆👆👆 ¡SOLO TOCA LO DE ARRIBA! EL RESTO ES CÓDIGO DE LA CARTA 👇👇👇
 
 const FadeSection = ({ children, delay = 0 }: { children?: React.ReactNode, delay?: number }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -64,7 +76,7 @@ export default function Letter() {
             <p className="text-rose-400 text-sm tracking-widest uppercase mb-2">Una carta desde el corazón</p>
             <h1 className="font-handwriting text-6xl text-rose-600 mb-6">Mi Amor</h1>
             
-            {/* 📸 FOTO PRINCIPAL */}
+            {/* 📸 FOTO PRINCIPAL USANDO LA VARIABLE PHOTOS.main */}
             <div className="relative mx-auto w-48 h-48 mb-6">
               <div className="absolute inset-0 rounded-full border-4 border-rose-200 animate-pulse"></div>
               <img 
@@ -101,7 +113,7 @@ export default function Letter() {
         {/* --- PHOTO LEFT & TEXT --- */}
         <div className="clearfix mb-8">
           <FadeSection>
-              {/* 📸 FOTO LATERAL 1 */}
+              {/* 📸 FOTO LATERAL 1 USANDO PHOTOS.moment1 */}
               <PhotoFrame 
                   src={PHOTOS.moment1}
                   alt="Un momento juntos" 
@@ -126,7 +138,7 @@ export default function Letter() {
         {/* --- PHOTO RIGHT & TEXT --- */}
         <div className="clearfix mb-10">
            <FadeSection>
-              {/* 📸 FOTO LATERAL 2 */}
+              {/* 📸 FOTO LATERAL 2 USANDO PHOTOS.moment2 */}
               <PhotoFrame 
                   src={PHOTOS.moment2}
                   alt="Detalle hermoso" 
@@ -148,7 +160,7 @@ export default function Letter() {
                 <Heart className="w-8 h-8 fill-rose-600 animate-heartbeat" />
               </h2>
               
-              {/* 📸 FOTO FINAL GRANDE */}
+              {/* 📸 FOTO FINAL GRANDE USANDO PHOTOS.final */}
               <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl mb-8 group">
                   <img 
                       src={PHOTOS.final}
