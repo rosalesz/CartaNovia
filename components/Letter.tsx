@@ -15,18 +15,18 @@ import { Heart } from 'lucide-react';
 const PHOTOS = {
   // 1. Foto principal (La del círculo arriba). 
   // Idealmente cuadrada o de rostro.
-  main: "https://raw.githubusercontent.com/rosalesz/CartaNovia/main/IMG-20251113-WA0043.jpg",
+  main: "https://raw.githubusercontent.com/rosalesz/CartaNovia/7c9f5e67b5583f5c8c674822e83e88b7132c9cdf/Fotos/1.jpg",
   
   // 2. Primera foto inclinada (Izquierda) - "Un momento juntos"
   // CAMBIO: Ahora uso una imagen HORIZONTAL para que no se vea "larga".
-  moment1: "https://images.unsplash.com/photo-1511988617509-a57c8a288659?q=80&w=1000&auto=format&fit=crop",
+  moment1: "https://raw.githubusercontent.com/rosalesz/CartaNovia/7c9f5e67b5583f5c8c674822e83e88b7132c9cdf/Fotos/2.jpg",
   
   // 3. Segunda foto inclinada (Derecha)
-  moment2: "https://images.unsplash.com/photo-1621112904887-419379ce6824?q=80&w=1000&auto=format&fit=crop",
+  moment2: "https://raw.githubusercontent.com/rosalesz/CartaNovia/7c9f5e67b5583f5c8c674822e83e88b7132c9cdf/Fotos/3.jpg",
   
   // 4. Foto final grande (Al final de la carta)
   // Idealmente vertical.
-  final: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1000&auto=format&fit=crop"
+  final: "https://raw.githubusercontent.com/rosalesz/CartaNovia/7c9f5e67b5583f5c8c674822e83e88b7132c9cdf/Fotos/5.jpg"
 };
 
 // 👆👆👆 ¡SOLO TOCA LO DE ARRIBA! EL RESTO ES CÓDIGO DE LA CARTA 👇👇👇
