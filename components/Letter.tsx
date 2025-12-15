@@ -15,7 +15,7 @@ import { Heart } from 'lucide-react';
 const PHOTOS = {
   // 1. Foto principal (La del círculo arriba). 
   // Idealmente cuadrada o de rostro.
-  main: "https://github.com/rosalesz/CartaNovia/blob/main/IMG-20251113-WA0043.jpg",
+  main: "https://raw.githubusercontent.com/rosalesz/CartaNovia/main/IMG-20251113-WA0043.jpg",
   
   // 2. Primera foto inclinada (Izquierda) - "Un momento juntos"
   // CAMBIO: Ahora uso una imagen HORIZONTAL para que no se vea "larga".
