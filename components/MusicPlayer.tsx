@@ -7,7 +7,7 @@ interface MusicPlayerProps {
 
 // 🎵 URL DE LA MÚSICA - Reemplazar esta URL con tu archivo mp3
 // Ejemplo de música romántica libre de derechos (Piano suave)
-const MUSIC_URL = "https://raw.githubusercontent.com/rosalesz/CartaNovia/b22f70c428e480e5882acdb4fe1808e5bc5e7535/Fotos/Me%20Gustas%20Tanto%20-%20Andrey%20Serrano%20me%20gustas%20tanto%20tanto%20que%20por%20ti%20yo%20soy%20capaz.mp3
+const MUSIC_URL = "https://raw.githubusercontent.com/rosalesz/CartaNovia/main/Fotos/me-gustas-tanto.mp3
 ";
 
 export default function MusicPlayer({ autoPlay = false }: MusicPlayerProps) {
