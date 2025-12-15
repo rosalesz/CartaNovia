@@ -3,6 +3,22 @@ import PhotoFrame from './PhotoFrame';
 import BackgroundEffects from './BackgroundEffects';
 import { Heart } from 'lucide-react';
 
+// 👇👇👇 CAMBIA TUS FOTOS AQUÍ 👇👇👇
+const PHOTOS = {
+  // Foto principal (círculo arriba). Idealmente cuadrada.
+  main: "https://picsum.photos/id/64/400/400",
+  
+  // Primera foto inclinada (izquierda)
+  moment1: "https://picsum.photos/id/331/300/400",
+  
+  // Segunda foto inclinada (derecha)
+  moment2: "https://picsum.photos/id/342/300/400",
+  
+  // Foto final grande vertical
+  final: "https://picsum.photos/id/429/600/800"
+};
+// 👆👆👆 -------------------------- 👆👆👆
+
 const FadeSection = ({ children, delay = 0 }: { children?: React.ReactNode, delay?: number }) => {
   const [isVisible, setIsVisible] = useState(false);
   const domRef = useRef<HTMLDivElement>(null);
@@ -52,7 +68,7 @@ export default function Letter() {
             <div className="relative mx-auto w-48 h-48 mb-6">
               <div className="absolute inset-0 rounded-full border-4 border-rose-200 animate-pulse"></div>
               <img 
-                src="https://picsum.photos/id/64/400/400" 
+                src={PHOTOS.main}
                 alt="Tu hermoso rostro" 
                 className="w-full h-full object-cover rounded-full border-4 border-white shadow-xl relative z-10"
               />
@@ -87,7 +103,7 @@ export default function Letter() {
           <FadeSection>
               {/* 📸 FOTO LATERAL 1 */}
               <PhotoFrame 
-                  src="https://picsum.photos/id/331/300/400" 
+                  src={PHOTOS.moment1}
                   alt="Un momento juntos" 
                   className="float-left mr-4 mb-2 w-1/2 rotate-[-3deg]"
               />
@@ -112,7 +128,7 @@ export default function Letter() {
            <FadeSection>
               {/* 📸 FOTO LATERAL 2 */}
               <PhotoFrame 
-                  src="https://picsum.photos/id/342/300/400" 
+                  src={PHOTOS.moment2}
                   alt="Detalle hermoso" 
                   className="float-right ml-4 mb-2 w-1/2 rotate-[3deg]"
               />
@@ -135,7 +151,7 @@ export default function Letter() {
               {/* 📸 FOTO FINAL GRANDE */}
               <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl mb-8 group">
                   <img 
-                      src="https://picsum.photos/id/429/600/800" 
+                      src={PHOTOS.final}
                       alt="Nosotros" 
                       className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
