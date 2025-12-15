@@ -177,7 +177,7 @@ export default function Letter() {
               </p>
               <div className="w-16 h-1 bg-rose-300 mx-auto rounded-full mb-4"></div>
               <p className="font-handwriting text-3xl text-rose-600">
-                  [Tu Nombre]
+                  LLuis
               </p>
           </div>
         </FadeSection>
